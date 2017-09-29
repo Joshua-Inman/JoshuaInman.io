@@ -1,0 +1,237 @@
+/*********** NOTE: General **********/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #eee;
+	font-family: Arial;
+	color: #444;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 10px;
+	font-size: 2em;
+	color: #FF404E;
+	font-family: "Pacifico";
+	text-shadow: 1px 1px 1px #888;
+	-webkit-transition: 2000ms;
+}
+
+p {
+	margin-bottom: 25px;
+}
+
+a {
+	color: #1CA5B8;
+}
+
+.date {
+	font-weight: bold;
+	color: #1CA5B8;
+}
+
+/* NOTE: Website color palette:
+Main article background: #fff
+Background: #eee
+Box/text shadows & borders: #888 & #303030
+font: #444
+
+Headings: #FF404E
+Links: #1CA5B8
+Others: #012D41 & #DAECF3
+*/
+
+
+
+/*********** NOTE: Keyframes/Transitions **********/
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	
+	to {
+		opacity: 1;
+	}
+}
+
+.fade-in {
+	-webkit-animation: fadeIn 2500ms;
+}
+
+
+
+/*********** NOTE: Header & Navigation **********/
+.header-main {
+	background-color: #fff;
+	box-shadow: 1px 1px 5px #888888;
+	border-bottom: 1px solid #303030;
+}
+
+.header-main::after {
+	content: " ";
+	clear: both;
+	display: block;
+	visibility: none;
+}
+
+.header-container {
+	width: 85%;
+	margin: 0 auto;
+}
+
+.header-logo-img {
+	float: left;
+	padding: 26px 15px 26px 0;
+}
+
+.header-logo-text {
+	float: left;
+	text-decoration: none;
+	font-family: "Pacifico";
+	color: #303030;
+	font-size: 2.2em;
+	padding: 10px 0 10px 0;
+	text-shadow: 1px 1px 1px #888;
+	-webkit-transition: 250ms;
+}
+
+.header-logo-text:hover {
+	color: #1CA5B8;
+}
+
+.header-nav {
+	float: right;
+}
+
+.header-nav ul li {
+	display: inline-block;
+}
+
+.header-nav ul li a {
+	padding: 10px 20px;
+	font-size: 1.2em;
+	color: #1CA5B8;
+	text-decoration: none;
+	line-height: 86px;
+	-webkit-transition: 250ms;
+}
+
+.header-nav ul li a:hover {
+	color: #303030;
+	font-size: 1.6em;
+}
+
+
+
+/*********** NOTE: Footer **********/
+.footer-main {
+	width: 85%;
+	text-align: center;
+	font-size: .85em;
+	background-color: #fff;
+	margin: 25px auto;
+	border-radius: 15px;
+	box-shadow: 2px 2px 5px #888888;
+	border-bottom: 1px solid #303030;
+}
+
+.footer-main p {
+	padding: 5px;
+	font-style: italic;
+	margin-bottom: 0px;
+}
+
+.footer-main a {
+	text-decoration: none;
+}
+
+.footer-main img {
+	margin: 0 12px;
+}
+
+
+
+/*********** NOTE: Home **********/
+.home-container {
+	width: 85%;
+	margin: 0 auto 25px auto;
+}
+
+#canvas {
+	width: 100%;
+	display: block;
+}
+
+.main-article {
+	background-color: #fff;
+	margin-bottom: 25px;
+	padding: 20px;
+	box-shadow: 2px 2px 10px #888;
+	border-bottom: 1px solid #303030;
+	border-radius: 15px;
+}
+
+
+
+/*********** NOTE: About **********/
+.about-container {
+	width: 85%;
+	margin: 25px auto;
+}
+
+.main-article::after {
+	content: " ";
+	clear: both;
+	display: block;
+	visibility: none;
+}
+
+#about-myself-img {
+	border: 1px solid #888;
+	box-shadow: 0px 0px 8px #888;
+	border-radius: 15px;
+	max-width: 30%;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	float: left;
+	background-color: #eee;
+	padding: 5px;
+}
+
+#about-myself-heading {
+	text-align: center;
+	font-size: 2.2em;
+}
+
+.about-column-container {
+	background-color: #fff;
+	margin: 0 auto 25px auto;
+	padding: 20px;
+	box-shadow: 2px 2px 10px #888;
+	border-bottom: 1px solid #303030;
+	border-radius: 15px;
+	text-align: center;
+}
+
+.about-column {
+	width: 40%;
+	display: inline-block;
+	padding: 20px;
+}
+
+.about-column img {
+	max-width: 60%;
+	border: 1px solid #888;
+	box-shadow: 0px 0px 8px #888;
+	border-radius: 15px;
+	margin-bottom: 15px;
+	background-color: #eee;
+	padding: 5px;
+}
+
+
+
+/* Copyright © 2017 Joshua Inman 
+All rights reserved. */
