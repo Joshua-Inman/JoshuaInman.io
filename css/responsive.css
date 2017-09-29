@@ -1,5 +1,5 @@
 @media (max-width: 990px) {
-  /*********** NOTE: Header & Navigation **********/
+  /*********** Header & Navigation **********/
   .header-container {
     text-align: center;
   }
@@ -31,7 +31,7 @@
     padding: 10px 25px;
   }
   
-  /*********** NOTE: About **********/
+  /*********** About **********/
   #about-myself-img {
   	max-width: 75%;
     display: block;

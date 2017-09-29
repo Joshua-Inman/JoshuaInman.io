@@ -1,4 +1,4 @@
-/*********** NOTE: General **********/
+/*********** General **********/
 * {
 	margin: 0;
 	padding: 0;
@@ -32,7 +32,7 @@ a {
 	color: #1CA5B8;
 }
 
-/* NOTE: Website color palette:
+/* Website color palette:
 Main article background: #fff
 Background: #eee
 Box/text shadows & borders: #888 & #303030
@@ -45,7 +45,7 @@ Others: #012D41 & #DAECF3
 
 
 
-/*********** NOTE: Keyframes/Transitions **********/
+/*********** Keyframes/Transitions **********/
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -62,7 +62,7 @@ Others: #012D41 & #DAECF3
 
 
 
-/*********** NOTE: Header & Navigation **********/
+/*********** Header & Navigation **********/
 .header-main {
 	background-color: #fff;
 	box-shadow: 1px 1px 5px #888888;
@@ -125,7 +125,7 @@ Others: #012D41 & #DAECF3
 
 
 
-/*********** NOTE: Footer **********/
+/*********** Footer **********/
 .footer-main {
 	width: 85%;
 	text-align: center;
@@ -153,7 +153,7 @@ Others: #012D41 & #DAECF3
 
 
 
-/*********** NOTE: Home **********/
+/*********** Home **********/
 .home-container {
 	width: 85%;
 	margin: 0 auto 25px auto;
@@ -175,7 +175,7 @@ Others: #012D41 & #DAECF3
 
 
 
-/*********** NOTE: About **********/
+/*********** About **********/
 .about-container {
 	width: 85%;
 	margin: 25px auto;
