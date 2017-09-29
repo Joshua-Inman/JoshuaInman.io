@@ -16,6 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #FF404E;
 	font-family: "Pacifico";
 	text-shadow: 1px 1px 1px #888;
+	transition: 2000ms;
 	-webkit-transition: 2000ms;
 }
 
@@ -57,6 +58,7 @@ Others: #012D41 & #DAECF3
 }
 
 .fade-in {
+	animation: fadeIn 2500ms;
 	-webkit-animation: fadeIn 2500ms;
 }
 
@@ -94,6 +96,7 @@ Others: #012D41 & #DAECF3
 	font-size: 2.2em;
 	padding: 10px 0 10px 0;
 	text-shadow: 1px 1px 1px #888;
+	transition: 250ms;
 	-webkit-transition: 250ms;
 }
 
@@ -115,6 +118,7 @@ Others: #012D41 & #DAECF3
 	color: #1CA5B8;
 	text-decoration: none;
 	line-height: 86px;
+	transition: 250ms;
 	-webkit-transition: 250ms;
 }
 
