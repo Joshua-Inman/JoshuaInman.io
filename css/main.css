@@ -73,7 +73,7 @@ Others: #012D41 & #DAECF3
 	content: " ";
 	clear: both;
 	display: block;
-	visibility: none;
+	visibility: hidden;
 }
 
 .header-container {
@@ -185,7 +185,7 @@ Others: #012D41 & #DAECF3
 	content: " ";
 	clear: both;
 	display: block;
-	visibility: none;
+	visibility: hidden;
 }
 
 #about-myself-img {
