@@ -1,5 +1,6 @@
 # JoshuaInman.io
-**Version 2.0.1** - [Changelog](CHANGELOG.md)
+**Version 2.0.1** - [Changelog](CHANGELOG.md).
+
 Visit my website [here](http://joshuainman.io/).
 
 ## Contributors
