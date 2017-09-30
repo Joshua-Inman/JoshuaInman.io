@@ -237,5 +237,23 @@ Others: #012D41 & #DAECF3
 
 
 
+/*********** Contact **********/
+.contact-container {
+	width: 85%;
+	margin: 25px auto;
+}
+
+form {
+	max-width: 50%;
+	margin: 0 auto 50px;
+}
+
+label {
+	display: block;
+	margin: 10px 0;
+}
+
+
+
 /* Copyright © 2017 Joshua Inman 
 All rights reserved. */
