@@ -243,6 +243,10 @@ Others: #012D41 & #DAECF3
 	margin: 25px auto;
 }
 
+h1#contact-heading {
+	color: blue;
+}
+
 form {
 	max-width: 50%;
 	margin: 0 auto 50px;
@@ -251,6 +255,18 @@ form {
 label {
 	display: block;
 	margin: 10px 0;
+}
+
+.alert-box {
+	text-align: center;
+}
+
+.alert-success {
+	color: green;
+}
+
+.alert-error {
+	color: red;
 }
 
 

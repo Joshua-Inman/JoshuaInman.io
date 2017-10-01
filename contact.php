@@ -30,9 +30,7 @@ if (!empty($name) && !empty($email) && !empty($message)) {
 
     // Email headers. 
     $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-Type: text/html;charset=UTF-8" . "\r\n";
-
-    // Additional headers. 
+    $headers .= "Content-Type: text/html;charset=UTF-8" . "\r\n"; 
     $headers .= "From: " . $name . "<" . $email . ">" . "\r\n";
 
     if (mail($toEmail, $subject, $body, $headers)) {
@@ -62,7 +60,7 @@ if (!empty($name) && !empty($email) && !empty($message)) {
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<!-- Temporarily removing viewport meta tag. -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-  <style>
+  <!-- <style>
   .alert-box {
     text-align: center;
   }
@@ -74,7 +72,7 @@ if (!empty($name) && !empty($email) && !empty($message)) {
   .alert-error {
     color: red;
   }
-  </style>
+  </style> -->
 </head>
 <body class="fade-in">
   <header class="header-main">
@@ -94,7 +92,7 @@ if (!empty($name) && !empty($email) && !empty($message)) {
   <!-- End of header and navigation, start of primary content container. -->
   <div class="contact-container">
     <article class="main-article">
-      <h1>Contact Me</h1>
+      <h1 id="contact-heading">Contact Me</h1>
       <?php if ($msg != ""): ?>
       <div class="alert-box"><?php echo $msg; ?></div>
       <?php endif; ?>
@@ -141,6 +139,6 @@ if (!empty($name) && !empty($email) && !empty($message)) {
   <script src="js/contact.js"></script>
 </body>
 </html>
-  
-  <!-- Copyright © 2017 Joshua Inman
-  All rights reserved. -->
+
+<!-- Copyright © 2017 Joshua Inman
+All rights reserved. -->
