@@ -1,78 +1,66 @@
 <?php
 // Message vars.
-$msg = "";
+$msg = '';
+$msgClass = '';
 
 // Check for submit.
-if (filter_has_var(INPUT_POST, "submit")) {
-  // Get form data. 
-  $name = htmlspecialchars($_POST["name"]);
-  $email = htmlspecialchars($_POST["email"]);
-  $message = htmlspecialchars($_POST["message"]);
-}
+if (filter_has_var(INPUT_POST, 'submit')) {
+  // Get form input.
+  $name = htmlspecialchars($_POST['name']);
+  $email = htmlspecialchars($_POST['email']);
+  $message = htmlspecialchars($_POST['message']);
 
-// Form validation.
-if (!empty($name) && !empty($email) && !empty($message)) {
-  // Name, email and message are all filled out.
-  // Check for valid email.
-  if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-    // Failed.
-    $msg = "<p class='alert-error'>Please enter a valid email address.</p>";
-  } else {
-    // Passed.
-    // Recipent's email. 
-    $toEmail = "JoshuaInman@icloud.com"; 
-    $subject = "Contact Request From " . $name;
-    $body = '<h2>Contact Request</h2>
-            <h4>Name</h4><p>' . $name . '</p>
-            <h4>Email</h4><p>' . $email . '</p>
-            <h4>Message</h4><p>' . $message . '</p>
-    ';
-
-    // Email headers. 
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-Type: text/html;charset=UTF-8" . "\r\n"; 
-    $headers .= "From: " . $name . "<" . $email . ">" . "\r\n";
-
-    if (mail($toEmail, $subject, $body, $headers)) {
-      // Email sent. 
-      $msg = "<p class='alert-success'>Your email has been sent!</p>";
+  if (!empty($email) && !empty($name) && !empty($message)) {
+    // Email, name and message field have been filled, now validating email.
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+      // Invalid email.
+      $msg = 'Please enter a valid email address.';
+      $msgClass = 'alert-error';
     } else {
-      // Failed.
-      $msg = "<p class='alert-error'>An error has occurred, please try again.</p>";
+      // Valid email.
+      $toEmail = 'joshuainman@icloud.com';
+      $subject = 'Contact Request From '.$name;
+      $body = '<h2>Contact Request</h2>
+        <h4>Name</h4><p>'.$name.'</p>
+        <h4>Email</h4><p>'.$email.'</p>
+        <h4>Message</h4><p>'.$message.'</p>
+      ';
+
+      // Email headers.
+      $headers = "MIME-Version: 1.0" ."\r\n";
+      $headers .="Content-Type:text/html;charset=UTF-8" . "\r\n";
+      $headers .= "From: " .$name. "<".$email.">". "\r\n";
+
+      if (mail($toEmail, $subject, $body, $headers)) {
+        // Email successfully sent.
+        $msg = 'Your email has been sent, thank you!';
+        $msgClass = 'alert-success';
+      } else {
+        // Email failed to send.
+        $msg = 'An error has occurred, please try again.';
+        $msgClass = 'alert-error';
+      }
     }
+  } else {
+    $msg = 'Please fill in all required fields.';
+    $msgClass = 'alert-error';
   }
-} else {
-  // Name, email and message are not all filled out.
-  $msg = "<p class='alert-error'>Please fill in all fields.</p>";
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Joshua Inman | Contact</title>
 	<meta charset="utf-8">
-	<meta name="site-version" content="2.0.1">
 	<meta name="author" content="Joshua Inman">
 	<link rel="shortcut icon" type="img/png" href="img/favicon.png">
-	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <!-- Glanced at bootstrap for inspiration. -->
+  <!-- <link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<!-- Temporarily removing viewport meta tag. -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-  <!-- <style>
-  .alert-box {
-    text-align: center;
-  }
-
-  .alert-success {
-    color: green;
-  }
-
-  .alert-error {
-    color: red;
-  }
-  </style> -->
 </head>
 <body class="fade-in">
   <header class="header-main">
@@ -92,25 +80,25 @@ if (!empty($name) && !empty($email) && !empty($message)) {
   <!-- End of header and navigation, start of primary content container. -->
   <div class="contact-container">
     <article class="main-article">
-      <h1 id="contact-heading">Contact Me</h1>
-      <?php if ($msg != ""): ?>
-      <div class="alert-box"><?php echo $msg; ?></div>
-      <?php endif; ?>
+      <h1 id="contact-heading">Contact Me Below</h1>
+      <p id="contact-subheading">Thank you for contacting me, I will get back to you as soon as possible.</p>
+      <?php if($msg != ''): ?>
+    	<div class="alert <?php echo $msgClass; ?>"><?php echo $msg; ?></div>
+    	<?php endif; ?>
       <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <div>
-          <label>Name</label>
-          <input type="text" name="name" value="<?php echo isset($_POST['name']) ? $name : ''; ?>">
+	      <div class="contact-group">
+		      <label><span style="color: #FF404E;">*</span>Name:</label>
+		      <input type="text" name="name" value="<?php echo isset($_POST['name']) ? $name : ''; ?>">
+	      </div>
+	      <div class="contact-group">
+	      	<label><span style="color: #FF404E;">*</span>Email:</label>
+	      	<input type="text" name="email" value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
+	      </div>
+	      <div class="contact-group">
+	      	<label>Message:</label>
+	      	<textarea name="message"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
         </div>
-        <div>
-          <label>Email</label>
-          <input type="text" name="email" value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
-        </div>
-        <div>
-          <label>Message</label>
-          <textarea name="message"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
-        </div>
-        <br>
-        <button type="submit" name="submit">Submit</button>
+        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
       </form>
     </article>
   </div>
@@ -136,7 +124,11 @@ if (!empty($name) && !empty($email) && !empty($message)) {
     </p>
     <p>Copyright &copy; 2017 Joshua Inman</p>
   </footer>
-  <script src="js/contact.js"></script>
+  <script>
+  window.onload = function() {
+    document.getElementById("contact-heading").setAttribute("style", "-webkit-transform: rotateX(360deg)");
+  };
+  </script>
 </body>
 </html>
 
