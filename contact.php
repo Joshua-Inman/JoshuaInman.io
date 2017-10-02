@@ -88,15 +88,15 @@ if (filter_has_var(INPUT_POST, 'submit')) {
       <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 	      <div class="contact-group">
 		      <label><span style="color: #FF404E;">*</span>Name:</label>
-		      <input type="text" name="name" value="<?php echo isset($_POST['name']) ? $name : ''; ?>">
+		      <input type="text" name="name" value="">
 	      </div>
 	      <div class="contact-group">
 	      	<label><span style="color: #FF404E;">*</span>Email:</label>
-	      	<input type="text" name="email" value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
+	      	<input type="text" name="email" value="">
 	      </div>
 	      <div class="contact-group">
 	      	<label>Message:</label>
-	      	<textarea name="message"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
+	      	<textarea name="message"></textarea>
         </div>
         <button type="submit" name="submit" class="btn btn-primary">Submit</button>
       </form>
