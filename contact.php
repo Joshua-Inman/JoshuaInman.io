@@ -72,7 +72,7 @@ if (filter_has_var(INPUT_POST, 'submit')) {
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="changelog.html">Changelog</a></li>
+          <li><a href="https://github.com/Joshua-Inman/JoshuaInman.io/blob/master/CHANGELOG.md" target="_blank">Changelog</a></li>
         </ul>
       </nav>
     </div>
