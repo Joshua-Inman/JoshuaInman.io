@@ -58,7 +58,8 @@ if (filter_has_var(INPUT_POST, 'submit')) {
   <!-- Glanced at bootstrap for inspiration. -->
   <!-- <link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<!-- Temporarily removing viewport meta tag. -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 </head>
@@ -125,10 +126,10 @@ if (filter_has_var(INPUT_POST, 'submit')) {
     <p>Copyright &copy; 2017 Joshua Inman</p>
   </footer>
   <script>
-  window.onload = function() {
-    document.getElementById("contact-heading").setAttribute("style", "-webkit-transform: rotateX(360deg)");
-  };
-  </script>
+		$(document).ready(function() {
+			$(".header-logo-text").css("-webkit-transform", "rotateX(360deg)");
+		});
+	</script>
 </body>
 </html>
 

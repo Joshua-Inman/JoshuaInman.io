@@ -97,7 +97,7 @@ Others: #012D41 & #DAECF3
 	padding: 10px 0 10px 0;
 	text-shadow: 1px 1px 1px #888;
 	transition: 250ms;
-	-webkit-transition: 250ms;
+	-webkit-transition: 2000ms;
 }
 
 .header-logo-text:hover {
