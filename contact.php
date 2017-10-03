@@ -1,5 +1,5 @@
 <?php
-// Message vars.
+// Variables.
 $msg = '';
 $msgClass = '';
 
@@ -10,8 +10,9 @@ if (filter_has_var(INPUT_POST, 'submit')) {
   $email = htmlspecialchars($_POST['email']);
   $message = htmlspecialchars($_POST['message']);
 
+  // If entire form is filled out.
   if (!empty($email) && !empty($name) && !empty($message)) {
-    // Email, name and message field have been filled, now validating email.
+    // Checks for valid email.
     if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
       // Invalid email.
       $msg = 'Please enter a valid email address.';
@@ -47,8 +48,10 @@ if (filter_has_var(INPUT_POST, 'submit')) {
   }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Joshua Inman | Contact</title>
 	<meta charset="utf-8">
@@ -63,7 +66,10 @@ if (filter_has_var(INPUT_POST, 'submit')) {
 	<!-- Temporarily removing viewport meta tag. -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 </head>
+
 <body class="fade-in">
+
+  <!-- Header/navigation. -->
   <header class="header-main">
     <div class="header-container">
       <a href="#"><img src="img/favicon.png" class="header-logo-img" alt="logo"></a>
@@ -78,34 +84,43 @@ if (filter_has_var(INPUT_POST, 'submit')) {
       </nav>
     </div>
   </header>
-  <!-- End of header and navigation, start of primary content container. -->
+  
+  <!-- Primary content. -->
   <div class="contact-container">
     <article class="main-article">
+      
       <h1 id="contact-heading">Contact Me Below</h1>
       <p id="contact-subheading">Thank you for contacting me, I will get back to you as soon as possible.</p>
       <?php if($msg != ''): ?>
     	<div class="alert <?php echo $msgClass; ?>"><?php echo $msg; ?></div>
-    	<?php endif; ?>
+      <?php endif; ?>
+
       <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 	      <div class="contact-group">
 		      <label><span style="color: #FF404E;">*</span>Name:</label>
 		      <input type="text" name="name" value="">
-	      </div>
+        </div>
+        
 	      <div class="contact-group">
 	      	<label><span style="color: #FF404E;">*</span>Email:</label>
 	      	<input type="text" name="email" value="">
-	      </div>
+        </div>
+        
 	      <div class="contact-group">
 	      	<label>Message:</label>
 	      	<textarea name="message"></textarea>
         </div>
+
         <button type="submit" name="submit" class="btn btn-primary">Submit</button>
       </form>
+
     </article>
   </div>
-  <!-- End of primary content container and start of footer. -->
+
+  <!-- Footer. -->
   <footer class="footer-main">
     <p><a href="#">Back to top &raquo;</a></p>
+
     <p>
       <a href="https://youtube.com/binks" target="_blank">
         <img src="img/youtube.png" class="youtube" alt="YouTube Icon">
@@ -123,13 +138,17 @@ if (filter_has_var(INPUT_POST, 'submit')) {
         <img src="img/instagram.png" class="instagram" alt="Instagram Icon">
       </a>
     </p>
+
     <p>Copyright &copy; 2017 Joshua Inman</p>
   </footer>
+
+  <!-- Scripts. -->
   <script>
 		$(document).ready(function() {
 			$(".header-logo-text").css("-webkit-transform", "rotateX(360deg)");
 		});
-	</script>
+  </script>
+
 </body>
 </html>
 
