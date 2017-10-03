@@ -325,11 +325,6 @@ button {
 	transition: 250ms;
 }
 
-button:hover {
-	background-color: #FF1D34;
-	font-size: 1em;
-}
-
 button:active {
 	outline: none;
 }
