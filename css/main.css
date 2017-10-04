@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 2em;
 	color: #FF404E;
 	font-family: "Pacifico";
-	text-shadow: 1px 1px 1px #888;
+	text-shadow: 1px 1px 1px #303030;
 	transition: 2000ms;
 	-webkit-transition: 2000ms;
 }
@@ -26,11 +26,18 @@ p {
 
 a {
 	color: #1CA5B8;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 .date {
-	font-weight: bold;
+	font-size: 0.8em;
 	color: #1CA5B8;
+	font-weight: bold;
+	font-style: italic;
 }
 
 /* Website color palette:
@@ -92,7 +99,7 @@ Others: #012D41 & #DAECF3
 	float: left;
 	text-decoration: none;
 	font-family: "Pacifico";
-	color: #303030;
+	color: #444;
 	font-size: 2.2em;
 	padding: 10px 0 10px 0;
 	text-shadow: 1px 1px 1px #888;
@@ -101,7 +108,7 @@ Others: #012D41 & #DAECF3
 }
 
 .header-logo-text:hover {
-	color: #1CA5B8;
+	text-decoration: none;
 }
 
 .header-nav {
@@ -115,16 +122,23 @@ Others: #012D41 & #DAECF3
 .header-nav ul li a {
 	padding: 10px 20px;
 	font-size: 1.2em;
-	color: #1CA5B8;
+	color: #222;
 	text-decoration: none;
 	line-height: 86px;
-	transition: 250ms;
-	-webkit-transition: 250ms;
 }
 
 .header-nav ul li a:hover {
-	color: #303030;
-	font-size: 1.6em;
+	background-color: #1CA5B8;
+	border-radius: 5px;
+	color: #fff;
+	box-shadow: 1px 1px 5px #888888;
+}
+
+.header-nav ul li .active {
+	background-color: #1CA5B8;
+	border-radius: 5px;
+	color: #fff;
+	box-shadow: 1px 1px 5px #888888;
 }
 
 

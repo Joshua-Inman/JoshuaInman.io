@@ -72,13 +72,13 @@ if (filter_has_var(INPUT_POST, 'submit')) {
   <!-- Header/navigation. -->
   <header class="header-main">
     <div class="header-container">
-      <a href="#"><img src="img/favicon.png" class="header-logo-img" alt="logo"></a>
+      <a href="index.html"><img src="img/favicon.png" class="header-logo-img" alt="logo"></a>
       <a href="index.html" class="header-logo-text">JoshuaInman.io</a>
       <nav class="header-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#" class="active">Contact</a></li>
           <li><a href="https://github.com/Joshua-Inman/JoshuaInman.io/blob/master/CHANGELOG.md" target="_blank">Changelog</a></li>
         </ul>
       </nav>
