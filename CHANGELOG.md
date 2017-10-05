@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.0.3 - October 5, 2017
+**New header/navigation.**
+- Redesigned header and nav bar.
+- Updated media queries.
+- Multitude of code clean up and restructuring.
+
 ## v2.0.2 - October 1, 2017
 **Construction of the contact page.**
 - Added Contact page.
