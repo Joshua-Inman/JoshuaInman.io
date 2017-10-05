@@ -1,36 +1,41 @@
-@media (max-width: 990px) {
-  /*********** Header & Navigation **********/
-  .header-container {
-    text-align: center;
+@media (max-width: 1440px) {
+  /*********** Header/Navigation **********/
+  #header-main {
+    text-align: center
   }
-  
-  .header-logo-img {
-    margin-right: 15px;
-    padding: 0;
+
+  #header-drawer {
     float: none;
+    display: block;
+    margin: 0;
   }
-  
-  .header-logo-text {
-    padding: 0;
+
+  #header-subheading {
+    display: block;
+    margin: -10px 0 25px 0;
+  }
+
+  #main-nav {
     float: none;
-    font-size: 2.8em;
+    display: block;
   }
-  
-  .header-nav {
-    float: none;
+
+  #main-nav ul {
+    margin: 10px 0 30px 0;
   }
-  
-  .header-nav ul li {
-  	display: inline-block;
-    margin: 0 0 10px 0;
-  }
-  
-  .header-nav ul li a {
-    line-height: normal;
+
+  #main-nav ul li a {
+    padding: 15px 20px;
     font-size: 1.2em;
-    padding: 10px 25px;
+    color: #012D41;
+    text-decoration: none;
+    line-height: normal;
   }
-  
+}
+
+
+
+@media (max-width: 990px) {  
   /*********** About **********/
   #about-myself-img {
   	max-width: 75%;

@@ -70,11 +70,14 @@ if (filter_has_var(INPUT_POST, 'submit')) {
 <body class="fade-in">
 
   <!-- Header/navigation. -->
-  <header class="header-main">
-    <div class="header-container">
-      <a href="index.html"><img src="img/favicon.png" class="header-logo-img" alt="logo"></a>
-      <a href="index.html" class="header-logo-text">JoshuaInman.io</a>
-      <nav class="header-nav">
+  <header id="header-main">
+    <div id="header-container">
+      <div id="header-drawer">
+        <a href="#"><img src="img/favicon.png" id="header-logo-img" alt="logo"></a>
+        <a href="#" id="header-logo-text">JoshuaInman.io</a>
+        <p id="header-subheading">Web Developer &amp; Graphic Designer .</p>
+      </div>
+      <nav id="main-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -118,7 +121,7 @@ if (filter_has_var(INPUT_POST, 'submit')) {
   </div>
 
   <!-- Footer. -->
-  <footer class="footer-main">
+  <footer id="main-footer">
     <p><a href="#">Back to top &raquo;</a></p>
 
     <p>

@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-shadow: 1px 1px 1px #303030;
 	transition: 2000ms;
 	-webkit-transition: 2000ms;
+	-moz-transition: 2000ms;
 }
 
 p {
@@ -33,6 +34,16 @@ a:hover {
 	text-decoration: underline;
 }
 
+::selection {
+	background-color: #1CA5B8;
+	color: #fff;
+}
+
+::-moz-selection {
+	background-color: #1CA5B8;
+	color: #fff;
+}
+
 .date {
 	font-size: 0.8em;
 	color: #1CA5B8;
@@ -41,14 +52,15 @@ a:hover {
 }
 
 /* Website color palette:
-Main article background: #fff
-Background: #eee
-Box/text shadows & borders: #888 & #303030
-font: #444
+Main article background: #fff (Pure white.)
+Background: #eee (Light white.)
+Box/text shadows & borders: #888 (Lightest gray.) & #303030 (Dark gray.)
+font: #444 (Light gray.)
 
-Headings: #FF404E
-Links: #1CA5B8
-Others: #012D41 & #DAECF3
+Headings: #FF404E (My red.)
+Links: #1CA5B8 (My blue.)
+Others: #012D41 (My Dark blue.)
+				#DAECF3 (My Light blue.)
 */
 
 
@@ -67,74 +79,83 @@ Others: #012D41 & #DAECF3
 .fade-in {
 	animation: fadeIn 2500ms;
 	-webkit-animation: fadeIn 2500ms;
+	-moz-animation: fadeIn 2500ms;
 }
 
 
 
 /*********** Header/Navigation **********/
-.header-main {
+#header-main {
 	background-color: #fff;
 	box-shadow: 1px 1px 5px #888888;
-	border-bottom: 1px solid #303030;
+	border-bottom: 1px solid #202020;
 }
 
-.header-main::after {
-	content: " ";
+#header-main::after {
+	content: "";
 	clear: both;
 	display: block;
 	visibility: hidden;
 }
 
-.header-container {
+#header-container {
 	width: 85%;
 	margin: 0 auto;
 }
 
-.header-logo-img {
+#header-drawer {
 	float: left;
-	padding: 26px 15px 26px 0;
+	margin: 15px 0 15px 0;
 }
 
-.header-logo-text {
-	float: left;
+#header-logo-img {
+	margin: 0 5px 2px 0;
+}
+
+#header-logo-text {
+	color: #012D41;
 	text-decoration: none;
 	font-family: "Pacifico";
-	color: #444;
-	font-size: 2.2em;
-	padding: 10px 0 10px 0;
-	text-shadow: 1px 1px 1px #888;
-	transition: 250ms;
-	-webkit-transition: 2000ms;
+	font-size: 3em;
 }
 
-.header-logo-text:hover {
+#header-logo-text:hover {
 	text-decoration: none;
 }
 
-.header-nav {
+#header-subheading {
+	display: inline-block;
+	margin: 0 0 0 15px;
+	font-size: 1.2em;
+	font-family: "pacifico";
+	color: #1CA5B8;
+}
+
+#main-nav {
 	float: right;
 }
 
-.header-nav ul li {
+#main-nav ul li {
 	display: inline-block;
+	margin: 0 10px 0 10px;
 }
 
-.header-nav ul li a {
-	padding: 10px 20px;
+#main-nav ul li a {
+	padding: 15px 20px;
 	font-size: 1.2em;
-	color: #222;
+	color: #012D41;
 	text-decoration: none;
-	line-height: 86px;
+	line-height: 115px;
 }
 
-.header-nav ul li a:hover {
+#main-nav ul li a:hover {
 	background-color: #1CA5B8;
 	border-radius: 5px;
 	color: #fff;
 	box-shadow: 1px 1px 5px #888888;
 }
 
-.header-nav ul li .active {
+#main-nav ul li .active {
 	background-color: #1CA5B8;
 	border-radius: 5px;
 	color: #fff;
@@ -144,7 +165,7 @@ Others: #012D41 & #DAECF3
 
 
 /*********** Footer **********/
-.footer-main {
+#main-footer {
 	width: 85%;
 	text-align: center;
 	font-size: .85em;
@@ -156,17 +177,17 @@ Others: #012D41 & #DAECF3
 	overflow: hidden;
 }
 
-.footer-main p {
+#main-footer p {
 	padding: 5px;
 	font-style: italic;
 	margin-bottom: 0px;
 }
 
-.footer-main a {
+#main-footer a {
 	text-decoration: none;
 }
 
-.footer-main img {
+#main-footer img {
 	margin: 0 12px;
 }
 
@@ -212,8 +233,7 @@ Others: #012D41 & #DAECF3
 	box-shadow: 0px 0px 8px #888;
 	border-radius: 15px;
 	max-width: 30%;
-	margin-right: 20px;
-	margin-bottom: 10px;
+	margin: 15px 20px 15px 0;
 	float: left;
 	background-color: #eee;
 	padding: 5px;
@@ -279,10 +299,6 @@ form {
 	margin: 0 auto;
 }
 
-.contact-group {
-	margin-bottom: 15px;
-}
-
 label {
 	display: block;
 	margin-bottom: 10px;
@@ -341,6 +357,10 @@ button {
 
 button:active {
 	outline: none;
+}
+
+.contact-group {
+	margin-bottom: 15px;
 }
 
 .alert {
