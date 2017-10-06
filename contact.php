@@ -21,11 +21,9 @@ if (filter_has_var(INPUT_POST, 'submit')) {
       // Valid email.
       $toEmail = 'joshuainman@icloud.com';
       $subject = 'Contact Request From ' . $name;
-      $body = '<h2>Contact Request</h2>
-        <h4>Name</h4><p>' . $name . '</p>
-        <h4>Email</h4><p>' . $email . '</p>
-        <h4>Message</h4><p>' . $message . '</p>
-      ';
+      $body = '<h4>Name</h4><p>' . $name . '</p>
+      <h4>Email</h4><p>' . $email . '</p>
+      <h4>Message</h4><p>' . $message . '</p>';
 
       // Email headers.
       $headers = "MIME-Version: 1.0" . "\r\n";
