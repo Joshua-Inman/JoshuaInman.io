@@ -51,7 +51,7 @@ if (filter_has_var(INPUT_POST, 'submit')) {
 <html lang="en">
 
 <head>
-	<title>Joshua Inman | Contact</title>
+	<title>JoshuaInman.io | Contact</title>
 	<meta charset="utf-8">
 	<meta name="author" content="Joshua Inman">
 	<link rel="shortcut icon" type="img/png" href="img/favicon.png">
