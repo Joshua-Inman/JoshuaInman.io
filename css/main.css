@@ -202,6 +202,7 @@ Others: #012D41 (My Dark blue.)
 #canvas {
 	width: 100%;
 	display: block;
+	margin-top: 116px;
 }
 
 .main-article {
@@ -353,6 +354,7 @@ button {
 	font-weight: bold;
 	box-shadow: 1px 1px 2px #888888;
 	transition: 250ms;
+	font-size: 1em;
 }
 
 button:active {
