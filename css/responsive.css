@@ -1,9 +1,5 @@
 @media (max-width: 1440px) {
   /*********** Header/Navigation **********/
-  #canvas {
-    margin-top: 190px;
-  }
-
   #header-main {
     text-align: center
   }

@@ -202,8 +202,13 @@ Others: #012D41 (My Dark blue.)
 #canvas {
 	width: 100%;
 	display: block;
-	margin-top: 116px;
 }
+
+#canvas-subheading {
+	position: relative;
+	margin: -23% auto 0 auto;
+	display: block;
+   }
 
 .main-article {
 	background-color: #fff;

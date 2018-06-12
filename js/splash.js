@@ -94,20 +94,43 @@ function animate() {
   for (var i = 0; i < myCircles.length; i++) {
     myCircles[i].update();
   }
-  
+
   // Drawing logo in center of canvas.
   if (innerWidth >= 1243) {
-    context.font = "200px Pacifico";
-    context.fillStyle = "#303030";
+    context.font = "220px Pacifico";
+    context.fillStyle = "#1CA5B8";
     context.textAlign = "center";
     context.fillText("JoshuaInman.io", canvas.width/2, canvas.height/2);
+    
+    context.font = "216px Pacifico";
+    context.fillStyle = "#FF404E";
+    context.textAlign = "center";
+    context.fillText("JoshuaInman.io", canvas.width/2, canvas.height/2);
+
+    context.font = "220px Pacifico";
+    context.fillStyle = "#012D41";
+    context.textAlign = "center";
+    context.strokeText("JoshuaInman.io", canvas.width/2, canvas.height/2);
+    context.lineWidth=2;
+
   }
   
   if (innerWidth <= 1242) {
-    context.font = "130px Pacifico";
-    context.fillStyle = "#303030";
+    context.font = "60px Pacifico";
+    context.fillStyle = "#FF404E";
     context.textAlign = "center";
     context.fillText("JoshuaInman.io", canvas.width/2, canvas.height/2);
+
+    context.font = "60px Pacifico";
+    context.fillStyle = "#FF404E";
+    context.textAlign = "center";
+    context.fillText("JoshuaInman.io", canvas.width/2, canvas.height/2);
+
+    context.font = "60px Pacifico";
+    context.fillStyle = "#012D41";
+    context.textAlign = "center";
+    context.strokeText("JoshuaInman.io", canvas.width/2, canvas.height/2);
+    context.lineWidth=1;
   }
 }
 
